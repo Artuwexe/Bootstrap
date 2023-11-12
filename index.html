@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
   <head>
-    <title>Przykładowa strona</title>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista Zadań</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,214 +16,88 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-    <style>
-      form {
-        margin: auto;
-        width: 50%;
-      }
-      button {
-        margin: auto;
-        width: 20%;
-      }
-      article {
-        margin: auto;
-        width: 30%;
-      }
-    </style>
   </head>
-  <body class="bg-primary-subtle">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <br />
-    <form>
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">@</span>
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Username"
-          aria-label="Username"
-          aria-describedby="basic-addon1"
-        />
-      </div>
-
-      <div class="input-group mb-3">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Recipient's username"
-          aria-label="Recipient's username"
-          aria-describedby="basic-addon2"
-        />
-        <span class="input-group-text" id="basic-addon2">@example.com</span>
-      </div>
-
-      <div class="mb-3">
-        <label for="basic-url" class="form-label">Your vanity URL</label>
-        <div class="input-group">
-          <span class="input-group-text" id="basic-addon3"
-            >https://example.com/users/</span
+  <body>
+    <header class="container shadow mb-5 bg-body-tertiary rounded">
+      <nav class="navbar container-fluid navbar-expand-lg border-bottom d-flex justify-content-center">
+        <ul class="navbar-nav align-items-center justify-content-center">
+          <li class="nav-item w-25">
+            <img class="w-50" src="logoZSTI.jpg" alt="logo" />
+          </li>
+          <li
+            class="nav-item w-auto d-flex flex-row align-items-baseline gap-1"
           >
-          <input
-            type="text"
-            class="form-control"
-            id="basic-url"
-            aria-describedby="basic-addon3 basic-addon4"
-          />
+            <h3>Zespół Szkół Techniczno-Informatycznych</h3>
+            <span> w Gliwicach</span>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-primary">Home</button>
+            <button class="btn text-primary">About</button>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="text-center py-4">Zadania do wykonania</h1>
+    </header>
+
+    <main class="container">
+      <div class="row d-flex">
+        <div class="col border border-2 pt-5 pb-3 rounded">
+          <form class="border border-2 d-flex flex-column rounded p-2">
+            <h3 class="p-1 m-2">Dodawanie zadania</h3>
+            <label class="p-1 m-2">Nazwa zadania</label>
+            <input type="text" class="p-1 m-2 rounded">
+            <label class="p-1 m-2">Kategoria zadania</label>
+            <select class="p-1 m-2 rounded">
+                <option value="dom">dom</option>
+            </select>
+            <button class="btn bg-success text-white p-1 m-3">Dodaj zadanie</button>
+          </form>
+          <form class="border border-2 rounded d-flex flex-column p-2 mt-3">
+            <h3 class="p-1 m-2">Edycja Zadania</h3>
+            <label class="p-1 m-2">Nazwa zadania</label>
+            <input type="text" class="p-1 m-2 rounded">
+            <label class="p-1 m-2">Kategoria zadania</label>
+            <select class="p-1 m-2 rounded">
+              <option value="dom">dom</option>
+            </select>
+            <div class="p-1 m-2">
+              <input type="checkbox"> <label>zrobione</label>
+            </div>
+            <button class="btn bg-primary text-white p-1 m-3">Zapisz zadanie</button>
+          </form>
         </div>
-        <div class="form-text" id="basic-addon4">
-          Example help text goes outside the input group.
+        <div class="col col-lg-9">
+          <h3>Lista zadań</h3>
+          <form>
+            <h4>Do zrobienia</h4>
+            <ol>
+              <li>
+                <span>An item</span>
+                <div>
+                  <div><span>hobby</span><button></button></div>
+                  <div><button></button><button></button><button></button></div>
+                </div>
+              </li>
+            </ol>
+          </form>
+          <form>
+            <h4>Zrobione</h4>
+            <ol>
+              <li>
+                <span>An item</span>
+                <div>
+                  <div><span>hobby</span><button></button></div>
+                  <div><button></button><button></button><button></button></div>
+                </div>
+              </li>
+            </ol>
+          </form>
         </div>
       </div>
-
-      <div class="input-group mb-3">
-        <span class="input-group-text">$</span>
-        <input
-          type="text"
-          class="form-control"
-          aria-label="Amount (to the nearest dollar)"
-        />
-        <span class="input-group-text">.00</span>
-      </div>
-
-      <div class="input-group mb-3">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Username"
-          aria-label="Username"
-        />
-        <span class="input-group-text">@</span>
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Server"
-          aria-label="Server"
-        />
-      </div>
-
-      <div class="input-group">
-        <span class="input-group-text">With textarea</span>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
-      </div>
-      <br />
-      <div class="input-group">
-        <button type="button" class="btn btn-outline-info">Info</button>
-      </div>
-    </form>
-
-    <form>
-      <div class="form-check form-switch">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          role="switch"
-          id="flexSwitchCheckDefault"
-        />
-        <label class="form-check-label" for="flexSwitchCheckDefault"
-          >Default switch checkbox input</label
-        >
-      </div>
-      <div class="form-check form-switch">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          role="switch"
-          id="flexSwitchCheckChecked"
-          checked
-        />
-        <label class="form-check-label" for="flexSwitchCheckChecked"
-          >Checked switch checkbox input</label
-        >
-      </div>
-      <div class="form-check form-switch">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          role="switch"
-          id="flexSwitchCheckDisabled"
-          disabled
-        />
-        <label class="form-check-label" for="flexSwitchCheckDisabled"
-          >Disabled switch checkbox input</label
-        >
-      </div>
-      <div class="form-check form-switch">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          role="switch"
-          id="flexSwitchCheckCheckedDisabled"
-          checked
-          disabled
-        />
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled"
-          >Disabled checked switch checkbox input</label
-        >
-      </div>
-    </form>
-    <article>
-      <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="based.jpg" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="motor.jpg" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="sofy.jpg" class="d-block w-100" alt="..." />
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </article>
+    </main>
+    <footer>
+      <span>&copy; Artur Karczewski</span>
+    </footer>
+    
   </body>
 </html>
